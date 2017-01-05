@@ -1,0 +1,27 @@
+<!--pages/info/info.wxml-->
+<view> 
+        <view class="info-tiele flex-wrap">
+            <view><image src="/images/p2409022364.jpg"></image></view>
+            <view class="info-title-text flex-wrap flex-direction-col">
+                
+                    <view><text class="info-name">电影名字:</text>{{move.original_title}}</view>
+                    <view>
+                    主演:
+                        <block wx:for="{{move.casts}}" wx:for-item="casts">
+                            <text class="info-casts"></text>{{casts.name}}
+                        </block>
+                    </view>
+                    <block wx:for="{{move.directors}}" wx:for-item="directors">
+                    <view><text class="info-directors">导演:</text>{{directors.name}}</view>
+                    </block>
+                    
+                    <view><text class="info-year">年份:</text>{{move.year}}</view>
+                    <view><text class="info-rating">评分:</text>{{move.rating.average}}</view>    
+        </view>
+
+
+        </view>
+        <view class="info-description">
+            <text>剧情简介:</text>{{move.summary}}
+        </view>    
+</view>
