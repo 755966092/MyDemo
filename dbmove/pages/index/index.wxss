@@ -3,13 +3,19 @@
   display: flex;
   padding: 30rpx 0;
 }
+.move-title {
+  justify-content: space-between
+}
 .move-img {
   width: 250rpx;
   height:350rpx;
-
 }
 .move-info {
   padding:0 30rpx;
+  width: 500rpx;
+  box-sizing: border-box;
+  word-wrap:break-word ;
+  word-break: break-all 
 }
 .move-info view {
   padding: 10rpx 0;

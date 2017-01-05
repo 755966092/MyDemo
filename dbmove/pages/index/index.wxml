@@ -1,14 +1,20 @@
+<block wx:if="{{showLoand}}">  
+    <view class="page-loading">
+      <text class="weui-loading"/><text class="loading-text">玩命加载中</text>
+    </view>
+</block>
 
-  <block wx:for="{{move}}">
-    <navigator url="{{item.alt}}">
+<scroll-view bindscrolltolower="newScroll" scroll-y="true" lower-threshold="100" style="height: 100%;" bindscroll="sc" >
+    <block wx:for="{{move}}">
+    <view bindtap="newview" data-id="{{item.id}}" data-title="{{item.original_title}}">
       <view class="move">
       
         <!--海报-->
-        <image class="move-img" src="{{item.images.medium}}"></image>
-        <view class="flex-wrap flex-direction-col move-info">
+        <image class="move-img" src="{{item.images.large}}"></image>
+        <view class="flex-wrap flex-direction-col move-info flex-item">
             <!--信息-->
             <view class="flex-wrap flex-direction-row move-title">
-              <view class="move-name" data-id="{{item.id}}">{{item.original_title}}</view>
+              <view class="move-name" >{{item.original_title}}</view>
               <view class="move-year">{{item.year}}</view>
             </view>
 
@@ -33,5 +39,6 @@
             </view>
         </view>
       </view>
-    </navigator>
+    </view>
   </block>
+</scroll-view>
