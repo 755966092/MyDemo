@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view class="container flex-wrap ">
+    <text>当前城市:{{currentCity}}</text>
+    <text>PM2.5:{{pm25}}</text>
+    <block wx:for="{{index}}">
+        <view class="flex-wrap ">
+          <text>{{item.title}}:</text>
+          <text>{{item.zs}}</text>
+          <!--<text>{{item.tipt}}</text>-->
+          <!--<text>{{item.des}}</text>-->
+        </view>
+    </block>
+    
+    <block wx:for="{{weather_data}}">
+        <view class="flex-wrap ">
+          <text>{{item.date}}</text>
+          <text>{{item.weather}}</text>
+          <!--<text>风向:{{item.wind}}</text>-->
+          <text>{{item.temperature}}</text>
+        </view>
+    </block>
+</view>
