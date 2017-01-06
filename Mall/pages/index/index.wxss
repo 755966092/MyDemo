@@ -1,0 +1,61 @@
+
+/**搜索**/
+.search{
+    text-align: center;
+    width: 80%;
+    height: 80rpx;
+    margin: 5rpx auto;
+    border: 1px solid #eee;
+    border-radius: 10rpx;
+    
+}
+
+/**banner**/
+.banner image {
+  width: 100%;
+  height: 300rpx;
+}
+
+/**导航**/
+.nav {
+    margin-top: 50rpx;
+    margin-bottom: 50rpx;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.nav image {
+    width: 120rpx;
+    height: 120rpx;
+    margin: 20rpx;
+}
+.nav-title {
+    align-items: center
+}
+
+/**内容**/
+.hot {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.hot-title {
+    border:1px solid #ccc;
+    background: #eee;
+    width: 90%;
+
+}
+.hot image {
+    width: 300rpx;
+    height: 300rpx;
+    border: 1px solid #ccc;
+    margin-bottom: 40rpx;
+}
+.hot-list {
+    padding: 50rpx 0;
+    width: 90%;
+    justify-content: space-between;
+}
+.hot-kc {
+    text-align: center;
+}

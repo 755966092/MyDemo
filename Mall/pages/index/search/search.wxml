@@ -1,0 +1,12 @@
+<!--pages/index/search/search.wxml-->
+<view>
+   <view class="flex-wrap">
+        <input type="type" placeholder="搜索课程" bindblur="EventHandle"  auto-focus/>
+        <button  type="primary" size="mini" bindtap="defaultTap" plain="true">点击搜索</button>
+   </view>
+    <view>
+        <block wx:for="{{course}}">
+            <text bindtap="searchCourse" data-title="{{item}}">{{item}}</text>
+        </block>
+    </view>
+</view>

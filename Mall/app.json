@@ -1,0 +1,37 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/index/search/search",
+        "pages/logs/logs",
+        "pages/list/list",
+        "pages/list/search/search",
+        "pages/ke/ke"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#3D95D0",
+        "navigationBarTitleText": "跨考考研",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "list": [{
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "images/fy_1.png",
+                "selectedIconPath": "images/fy.png"
+            },
+            {
+                "pagePath": "pages/list/list",
+                "text": "购物车",
+                "iconPath": "images/kq_1.png",
+                "selectedIconPath": "images/kq.png"
+            },
+            {
+                "pagePath": "pages/ke/ke",
+                "text": "我的",
+                "iconPath": "images/lxr.png",
+                "selectedIconPath": "images/lxr_1.png"
+            }
+        ]
+    }
+}
