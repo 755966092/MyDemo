@@ -1,0 +1,40 @@
+<view class="info flex-wrap flex-direction-col">
+    <view>
+        <view class="info-content">
+            <image class="info-img" src="/images/v1.png" />
+        </view>
+        <view class="info-title flex-wrap flex-direction-row">
+        <view>
+                <view class = "info-name">
+                <text>课程名称:</text>
+                <text>课程</text>
+            </view>
+            <view class = "info-info flex-wrap flex-direction-row">
+                <view class = "info-price">
+                    <text>价格:</text>
+                    <text>999</text>
+                </view>
+                <view class = "info-people">
+                    <text>在学人数:</text>
+                    <text>99</text>
+                </view>
+            </view>
+        </view>
+            <view class = "info-collect flex-wrap flex-direction-col">
+                <icon type="success" size="30" color="red" />
+                <text>收藏</text>
+            </view>
+        </view>
+        <view class = "hr">  </view>
+        <view>
+            商品简介:
+        </view>
+    </view>
+   
+</view>
+ <view class="info-shpping">
+        <view class = "info-shppingCar"><text>加入购物车</text></view>
+         <view class = "info-buy" bindtap="shipInfo">立即购买</view> 
+     <!--   <navigator url="../search/search">立即购买</navigator> -->
+
+ </view>
