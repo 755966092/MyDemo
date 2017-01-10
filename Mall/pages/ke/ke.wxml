@@ -1,5 +1,0 @@
- <contact-button
-    type="default-dark" 
-    size="27"
-    session-from="weapp"
-   >点击</contact-button>

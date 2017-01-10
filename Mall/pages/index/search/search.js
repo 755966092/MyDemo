@@ -1,19 +1,25 @@
 // pages/index/search/search.js
-var app = getApp();
 Page({
     data: {
-        course: ['考研政治', '考研数学', '考研英语', '翻硕']
+        //搜索标签
+        seaLab: ['2018翻译硕士-旅游类', '2018翻译硕士-旅游类文章攻', '2018翻译硕士-旅游类文章攻克班', '2018翻译硕士-旅游类', '2018翻译硕士-旅游类文章攻', '2018翻译硕士-旅游类文章攻克班'],
+        condition: true
+
     },
-    searchCourse: function(e) {
-        console.log(app.search(e))
+    back: function() {
+        wx.navigateBack(1);
     },
-    //点击搜索按钮
-    defaultTap: function(e) {
-        console.log(e);
+    //获取焦点隐藏热门标签
+    targetSearch1: function() {
+        this.setData({
+            condition: false
+        })
     },
-    //失去焦点之后,获取输入的内容
-    EventHandle: function(e) {
-        console.log(e.detail.value)
+    //失去焦点显示热门标签
+    targetSearch2: function() {
+        this.setData({
+            condition: true
+        })
     },
     onLoad: function(options) {
         // 页面初始化 options为页面跳转所带来的参数

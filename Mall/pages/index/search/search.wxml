@@ -1,12 +1,29 @@
-<!--pages/index/search/search.wxml-->
-<view>
-   <view class="flex-wrap">
-        <input type="type" placeholder="搜索课程" bindblur="EventHandle"  auto-focus/>
-        <button  type="primary" size="mini" bindtap="defaultTap" plain="true">点击搜索</button>
-   </view>
-    <view>
-        <block wx:for="{{course}}">
-            <text bindtap="searchCourse" data-title="{{item}}">{{item}}</text>
+<view calss = "search">
+    <view class="search-search flex-wrap">
+        <icon type="search" size="20" color="#ccc" />
+        <input placeholder-style="font-family: 'microsoft yahei';font-size: 30rpx;" type="text" placeholder="在此输入要搜索的课程名称" bindinput="targetSearch1" bindblur="targetSearch2"/>
+        <text bindtap="back">取消</text>
+    </view>
+    <!--提示标签-->
+    <view wx:if="{{condition}}" class = "search-lable">
+        <text class = "search-hot">热门搜索</text>
+        <block wx:for="{{seaLab}}">
+            <view class = "lable">{{item}}</view>
         </block>
     </view>
-</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </view>

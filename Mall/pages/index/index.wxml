@@ -1,42 +1,75 @@
-<view>
+<view class = "home">
+  <view class="home-search">
+      <icon type="search" size="20" color="#ccc" />
+      <input placeholder-style="font-family: 'microsoft yahei';font-size: 30rpx;" type="text" placeholder="在此输入要搜索的课程名称"  bindfocus="targetSearch"/>
+  </view>
 
-    <!--搜索框-->
-    <view class="search">
-        <input  type="text" placeholder="搜索" bindfocus="targetSearch"/>
-    </view>
-    <view class="banner">
-    <!--banner-->
+  <!--banner-->
+  <view class="banner">
         <swiper circular="true" indicator-dots="true" autoplay="true" interval="3000" duration="1500">
             <block wx:for="{{imgUrls}}">
                 <swiper-item>
-                    <image src="{{item}}" class="slide-image" width="355" height="150"/>
+                    <image src="{{item}}" class="slide-image" bindtap="shipInfo" width="355" height="150"/>
                 </swiper-item>
             </block>
         </swiper>
     </view>
-   <!--导航-->
-   <view class="nav flex-wrap">
-        <block wx:for="{{navImgUrl}}">
-           
-           <view class="nav-title flex-wrap flex-direction-col">
-               <image src="{{item.imgurl}}" />
-               <text>{{item.name}}</text>
-           </view>
-        </block>
-   </view>
-   <!--热卖-->
-   <block wx:for="{{ke}}">
-        <view class="hot flex-wrap">
-                <view class="hot-title">{{item.title}}</view>
-                <view class="hot-list flex-wrap">
-                    <block wx:for="{{item.kcImgUrl}}" wx:for-item="i">
-                        <view class="hot-kc" bindtap="search" data-title="{{i.name}}">
-                            <image src="{{i.url}}"></image>
-                            <text>{{i.name}}</text>
-                        </view>
-                    </block>
-                </view>
-        </view>
-   </block>
 
+    <view class = "content">
+        <!--导航-->
+    <view class="nav flex-wrap">
+            <block wx:for="{{navImgUrl}}">
+                <view class="nav-title flex-wrap flex-direction-col" bindtap="shipNewPage" data-id="{{item.id}}" data-title="{{item.name}}">
+                    <image src="{{item.imgurl}}"/>
+                    <text>{{item.name}}</text>
+                </view>
+            </block>
+    </view>
+
+    <!--最新好课-->
+    
+        <view class = "hot">
+            <text class="hot-title">最新好课</text>
+            <view class="hot-list flex-wrap">
+                <block wx:for="{{newCourse}}">
+                    <view class="hot-info flex-item flex-wrap flex-direction-col" bindtap="search" bindtap="shipInfo"  data-title="{{item.name}}">
+                        <image src="{{item.url}}"></image>
+                        <text>{{item.name}}</text>
+                        <text class = "hot-price">￥{{item.price}}</text>
+                    </view>
+                </block>
+            </view>
+        </view>
+    <!--免费好课-->
+
+        <view class = "hot">
+            <text class="hot-title">免费好课</text>
+            <view class="hot-list flex-wrap">
+                <block wx:for="{{freeCourse}}">
+                    <view class="hot-info flex-item flex-wrap flex-direction-col" bindtap="search" bindtap="shipInfo"  data-title="{{item.name}}">
+                        <image src="{{item.url}}"></image>
+                        <text>{{item.name}}</text>
+                        <text class = "free-price">{{item.price}}</text>
+                    </view>
+                </block>
+            </view>
+        </view>
+    <!--活动专区-->
+
+        <view class = "hot">
+            <text class="hot-title">活动专区/畅销好课</text>
+            <view class="hot-list flex-wrap">
+                <block wx:for="{{activityCourse}}">
+                    <view class="hot-info flex-item flex-wrap flex-direction-col" bindtap="search" bindtap="shipInfo"  data-title="{{item.name}}">
+                        <image src="{{item.url}}"></image>
+                        <text>{{item.name}}</text>
+                        <view class = "flex-wrap">
+                            <text class = "hot-price">￥{{item.price}}</text>
+                            <text class = "activity-sale">{{item.price1}}</text>
+                        </view>
+                    </view>
+                </block>
+            </view>
+        </view>
+    </view> 
 </view>

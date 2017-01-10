@@ -1,15 +1,22 @@
 
+.home {
+    font-family: "microsoft yahei";
+    font-size: 24rpx;
+}
 /**搜索**/
-.search{
-    text-align: center;
-    width: 80%;
-    height: 80rpx;
-    margin: 5rpx auto;
-    border: 1px solid #eee;
-    border-radius: 10rpx;
+.home-search input {
+    background: #f6f6f6;
+    margin: 0 30rpx 15rpx;
+    padding: 0 70rpx;
+    border-radius: 66rpx;
+    height: 66rpx;
     
 }
-
+.home-search icon {
+    position: absolute;
+    left: 50rpx;
+    top: 15rpx;
+}
 /**banner**/
 .banner image {
   width: 100%;
@@ -18,44 +25,68 @@
 
 /**导航**/
 .nav {
-    margin-top: 50rpx;
-    margin-bottom: 50rpx;
+    background: #fff;
+    padding-top: 30rpx;
     width: 100%;
     flex-wrap: wrap;
     justify-content: center;
 }
 .nav image {
-    width: 120rpx;
-    height: 120rpx;
-    margin: 20rpx;
+    width: 100rpx;
+    height: 100rpx;
+    margin-bottom: 20rpx;
 }
 .nav-title {
-    align-items: center
+    align-items: center;
+    padding: 25rpx 34rpx;
 }
+
+.content {
+    background: #f6f6f6;
+}
+
 
 /**内容**/
 .hot {
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: center;
+    margin-top: 15rpx;
+    background: #fff;
 }
 .hot-title {
-    border:1px solid #ccc;
-    background: #eee;
-    width: 90%;
+    font-size: 30rpx;
+    font-weight: 700;
+    display: block;
+    padding: 30rpx 27.5rpx;
 
 }
-.hot image {
-    width: 300rpx;
-    height: 300rpx;
-    border: 1px solid #ccc;
-    margin-bottom: 40rpx;
-}
 .hot-list {
-    padding: 50rpx 0;
-    width: 90%;
-    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap
 }
-.hot-kc {
-    text-align: center;
+.hot-info {
+    width: 50%;
+    margin: 0 27.5rpx;
+    padding-bottom: 20rpx;
+    
+}
+.hot-info image{
+    width: 320rpx;
+    height: 171rpx;
+    margin-bottom: 15rpx;
+}
+.hot-info text {
+    font-size: 28rpx;
+}
+.hot-price {
+    color: #FF5C23;
+    font-weight: 600;
+}
+.free-price {
+    color: #09BB07;
+    font-weight: 600;
+    
+}
+.activity-sale {
+    margin-left: 20rpx;
+    text-decoration: line-through;
+    color: #ccc;
 }

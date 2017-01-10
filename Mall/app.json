@@ -2,36 +2,37 @@
     "pages": [
         "pages/index/index",
         "pages/index/search/search",
-        "pages/logs/logs",
-        "pages/list/list",
-        "pages/list/search/search",
-        "pages/ke/ke"
+        "pages/index/politics_info/politics_info",
+        "pages/shpping/shpping",
+        "pages/my/my",
+        "pages/logs/logs"
     ],
     "window": {
         "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#3D95D0",
-        "navigationBarTitleText": "跨考考研",
-        "navigationBarTextStyle": "white"
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "首页",
+        "backgroundColor": "#eeeeee",
+        "navigationBarTextStyle": "black"
     },
     "tabBar": {
-        "list": [{
-                "pagePath": "pages/index/index",
-                "text": "首页",
-                "iconPath": "images/fy_1.png",
-                "selectedIconPath": "images/fy.png"
-            },
-            {
-                "pagePath": "pages/list/list",
-                "text": "购物车",
-                "iconPath": "images/kq_1.png",
-                "selectedIconPath": "images/kq.png"
-            },
-            {
-                "pagePath": "pages/ke/ke",
-                "text": "我的",
-                "iconPath": "images/lxr.png",
-                "selectedIconPath": "images/lxr_1.png"
-            }
-        ]
+      "list": [{
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/home.png",
+        "selectedIconPath": "/images/home_1.png"
+      },
+      {
+        "pagePath": "pages/shpping/shpping",
+        "text": "购物车",
+        "iconPath": "/images/shpping.png",
+        "selectedIconPath": "/images/shpping_1.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "/images/my.png",
+        "selectedIconPath": "/images/my_1.png"
+      }
+      ]
     }
 }

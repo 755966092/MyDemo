@@ -1,0 +1,20 @@
+<!--pages/list/list.wxml-->
+<view class="root">
+    <!--课程信息-->
+    <block wx:for="{{list}}">
+        <view class="flex-wrap list">
+            <image class="list-image" src="{{item.img}}" />
+            <view class="flex-wrap flex-direction-col  list-info" >
+                <view>
+                    <text>{{item.name}}</text>
+                </view>
+                <view class="flex-wrap flex-direction-row list-price">
+                    <view>
+                        <text class="price"><text>￥</text>{{item.price}}</text>
+                    </view>
+                  
+                </view>
+            </view>
+        </view>
+    </block>
+</view>
