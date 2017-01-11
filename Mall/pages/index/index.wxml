@@ -1,7 +1,7 @@
 <view class = "home">
   <view class="home-search">
       <icon type="search" size="20" color="#ccc" />
-      <input placeholder-style="font-family: 'microsoft yahei';font-size: 30rpx;" type="text" placeholder="在此输入要搜索的课程名称"  bindfocus="targetSearch"/>
+      <input  placeholder-style="font-family: 'microsoft yahei';font-size: 30rpx;" type="text" placeholder="在此输入要搜索的课程名称"  bindfocus="targetSearch"/>
   </view>
 
   <!--banner-->
@@ -32,7 +32,7 @@
             <text class="hot-title">最新好课</text>
             <view class="hot-list flex-wrap">
                 <block wx:for="{{newCourse}}">
-                    <view class="hot-info flex-item flex-wrap flex-direction-col" bindtap="search" bindtap="shipInfo"  data-title="{{item.name}}">
+                    <view class="hot-info flex-item flex-wrap flex-direction-col" bindtap="tapSearch"  data-title="{{item.name}}">
                         <image src="{{item.url}}"></image>
                         <text>{{item.name}}</text>
                         <text class = "hot-price">￥{{item.price}}</text>
@@ -46,7 +46,7 @@
             <text class="hot-title">免费好课</text>
             <view class="hot-list flex-wrap">
                 <block wx:for="{{freeCourse}}">
-                    <view class="hot-info flex-item flex-wrap flex-direction-col" bindtap="search" bindtap="shipInfo"  data-title="{{item.name}}">
+                    <view class="hot-info flex-item flex-wrap flex-direction-col" bindtap="tapSearch"  data-title="{{item.name}}">
                         <image src="{{item.url}}"></image>
                         <text>{{item.name}}</text>
                         <text class = "free-price">{{item.price}}</text>
@@ -60,7 +60,7 @@
             <text class="hot-title">活动专区/畅销好课</text>
             <view class="hot-list flex-wrap">
                 <block wx:for="{{activityCourse}}">
-                    <view class="hot-info flex-item flex-wrap flex-direction-col" bindtap="search" bindtap="shipInfo"  data-title="{{item.name}}">
+                    <view class="hot-info flex-item flex-wrap flex-direction-col" bindtap="tapSearch"  data-title="{{item.name}}">
                         <image src="{{item.url}}"></image>
                         <text>{{item.name}}</text>
                         <view class = "flex-wrap">

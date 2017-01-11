@@ -138,8 +138,14 @@ Page({
             })
         } else {
             wx.navigateTo({
-                url: 'politics_info/politics_info?kc=' + kc + '&id=' + id
+                url: 'courseList/courseList?kc=' + kc + '&id=' + id
             })
         }
+    },
+    //课程详情页跳转
+    tapSearch: function() {
+        wx.navigateTo({
+            url: '/pages/index/courseInfo/courseInfo'
+        })
     }
 })

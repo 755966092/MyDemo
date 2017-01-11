@@ -1,29 +1,23 @@
 <view calss = "search">
     <view class="search-search flex-wrap">
-        <icon type="search" size="20" color="#ccc" />
-        <input placeholder-style="font-family: 'microsoft yahei';font-size: 30rpx;" type="text" placeholder="在此输入要搜索的课程名称" bindinput="targetSearch1" bindblur="targetSearch2"/>
+        <icon class="search_icon_a" type="search" size="20" color="#ccc" />
+        <input placeholder-style="font-family: 'microsoft yahei';font-size: 30rpx;" type="text" placeholder="在此输入要搜索的课程名称" bindinput="targetSearch1" bindfocus="EventHandle" bindblur="targetSearch2" value="{{inputValue}}"/>
+        <icon wx:if="{{conditionClear}}" class="search_icon_b" bindtap="clearIpt" type="clear" size="15" color="#ccc" />
         <text bindtap="back">取消</text>
     </view>
+    <!-- 搜索提示 -->
+    <block wx:for="{{cutText}}" >
+        <view class = "lable_1" wx:if="{{conditionCut}}" data-seaLab="{{item}}" bindtap="setIpt">{{item}}</view>   
+    </block>
+    
     <!--提示标签-->
     <view wx:if="{{condition}}" class = "search-lable">
         <text class = "search-hot">热门搜索</text>
         <block wx:for="{{seaLab}}">
-            <view class = "lable">{{item}}</view>
+            <view class = "lable" bindtap="tapSearch" data-seaLab="{{item}}">{{item}}</view>
         </block>
     </view>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
   </view>
+

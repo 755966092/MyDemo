@@ -2,7 +2,8 @@
     "pages": [
         "pages/index/index",
         "pages/index/search/search",
-        "pages/index/politics_info/politics_info",
+        "pages/index/courseList/courseList",
+        "pages/index/courseInfo/courseInfo",
         "pages/shpping/shpping",
         "pages/my/my",
         "pages/logs/logs"
@@ -15,24 +16,25 @@
         "navigationBarTextStyle": "black"
     },
     "tabBar": {
-      "list": [{
-        "pagePath": "pages/index/index",
-        "text": "首页",
-        "iconPath": "/images/home.png",
-        "selectedIconPath": "/images/home_1.png"
-      },
-      {
-        "pagePath": "pages/shpping/shpping",
-        "text": "购物车",
-        "iconPath": "/images/shpping.png",
-        "selectedIconPath": "/images/shpping_1.png"
-      },
-      {
-        "pagePath": "pages/my/my",
-        "text": "我的",
-        "iconPath": "/images/my.png",
-        "selectedIconPath": "/images/my_1.png"
-      }
-      ]
+        "borderStyle": "white",
+        "list": [{
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "/images/home.png",
+                "selectedIconPath": "/images/home_11.png"
+            },
+            {
+                "pagePath": "pages/shpping/shpping",
+                "text": "购物车",
+                "iconPath": "/images/shpping.png",
+                "selectedIconPath": "/images/shpping_1.png"
+            },
+            {
+                "pagePath": "pages/my/my",
+                "text": "我的",
+                "iconPath": "/images/my.png",
+                "selectedIconPath": "/images/my_1.png"
+            }
+        ]
     }
 }

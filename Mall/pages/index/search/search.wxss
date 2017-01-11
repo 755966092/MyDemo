@@ -23,9 +23,18 @@
 }
 .search-search icon {
     position: absolute;
+   
+}
+.search-search .search_icon_a{
     left: 50rpx;
     top: 15rpx;
 }
+.search-search .search_icon_b{
+    right: 150rpx;
+    top: 18rpx;
+    z-index: 1000;
+}
+ 
 
 /**提示标签**/
 
@@ -47,4 +56,16 @@
     line-height: 95rpx;
     height: 95rpx;
     border-bottom: 1rpx solid #E5E5E5;
+}
+.search-point {
+    padding: 0 30rpx;
+}
+.lable_1 {
+    position: relative;
+    font-family: 'microsoft yahei';
+    font-size: 30rpx;
+    line-height: 95rpx;
+    height: 95rpx;
+    margin: 0 30rpx;
+    border-bottom: 1rpx solid #ccc;
 }
