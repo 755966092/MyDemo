@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+	    body {
+	        background-color: #fff
+	    }
+	    
+	    body .left {
+	        width: 100px;
+	        background-color: #0ff;
+	        float: left
+	    }
+	    
+	    body .right {
+	        width: 200px;
+	        height: 200px;
+	        float: left
+	    }
+	    
+	    body .right .no1 div,
+	    body .right .no2 div {
+	        width: 200px;
+	        height: 200px;
+	        background-color: #ff0;
+	        display: none
+	    }
+	    
+	    body .right .no1 .show,
+	    body .right .no2 .show {
+	        display: block
+	    }
+	    
+	    .hide {
+	        display: none
+	    }
+    </style>
+</head>
+
+<body>
+    <div class="left">
+        <dl>
+            <dt class="title">列表1</dt>
+            <dd class="hide">列表1</dd>
+            <dd class="hide">列表2</dd>
+            <dd class="hide">列表3</dd>
+        </dl>
+        <dl>
+            <dt class="title">列表2</dt>
+            <dd class="hide">列表4</dd>
+            <dd class="hide">列表5</dd>
+            <dd class="hide">列表6</dd>
+        </dl>
+        <dl>
+            <dt class="title">列表3</dt>
+            <dd class="hide">列表7</dd>
+            <dd class="hide">列表8</dd>
+            <dd class="hide">列表9</dd>
+        </dl>
+    </div>
+    <div class="right">
+        <div class="no1">
+            <div class="show">列表1</div>
+            <div>列表2</div>
+            <div>列表3</div>
+        </div>
+        <div class="no1">
+            <div>列表4</div>
+            <div>列表5</div>
+            <div>列表6</div>
+        </div>
+        <div class="no1">
+            <div>列表7</div>
+            <div>列表8</div>
+            <div>列表9</div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+$(function() {
+    var dlindex;
+    $("dl").click(function(event) {
+        dlindex = $(this).index();
+    });
+    $("dt").click(function(event) {
+        $(this).siblings('dd').toggleClass('hide');
+        $("dl").eq(dlindex).find("dd").addClass('hide')
+    });
+    $("dd").click(function(event) {
+        $(".no1").eq(dlindex).children().eq($(this).index() - 1).addClass('show').siblings().removeClass('show');
+        $(".no1").eq(dlindex).siblings().children().removeClass('show');
+    });
+})
+</script>
+
+</html>
