@@ -1,0 +1,34 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/index/search/search",
+    "pages/index/info/info"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "电影TOP",
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh": true
+
+  },
+  "tabBar": {
+    "backgroundColor": "#eee",
+    "borderStyle": "white",
+    "selectedColor": "#268DCD",
+    "list": [
+        {
+      "pagePath": "pages/index/index",
+      "text": "热播",
+      "iconPath": "images/ing.png",
+      "selectedIconPath": "images/ing-active.png"
+    },
+    {
+      "pagePath": "pages/index/search/search",
+      "text": "搜索",
+      "iconPath": "images/coming.png",
+      "selectedIconPath": "images/coming-active.png"
+    }]
+  }
+}

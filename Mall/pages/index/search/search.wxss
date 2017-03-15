@@ -1,0 +1,71 @@
+.search {
+    font-family: "microsoft yahei";
+    font-size: 24rpx;
+}
+/**搜索**/
+.search-search {
+    height: 75rpx;
+    line-height: 60rpx;
+    font-family: "microsoft yahei";
+    font-size: 32rpx;
+    color: #888;
+}
+.search-search input {
+    background: #f6f6f6;
+    margin: 0 30rpx 15rpx;
+    padding-left: 70rpx;
+    border-radius: 65rpx;
+    height: 65rpx;
+    width: 515rpx;
+    font-family: "microsoft yahei";
+    font-size: 30rpx;
+    color: #000;
+}
+.search-search icon {
+    position: absolute;
+   
+}
+.search-search .search_icon_a{
+    left: 50rpx;
+    top: 15rpx;
+}
+.search-search .search_icon_b{
+    right: 150rpx;
+    top: 18rpx;
+    z-index: 1000;
+}
+ 
+
+/**提示标签**/
+
+.search-hot {
+    display:block;
+    color: #b2b2b2;
+    font-size: 26rpx;
+    margin: 30rpx 0 0 0;
+    
+}
+.search-lable {
+    border-top: 1rpx solid #E5E5E5;
+    font-family: "microsoft yahei";
+    font-size: 30rpx;
+    margin: 0 30rpx;
+    
+}
+.lable {
+    line-height: 95rpx;
+    height: 95rpx;
+    border-bottom: 1rpx solid #E5E5E5;
+}
+.search-point {
+    padding: 0 30rpx;
+}
+.lable_1 {
+    position: relative;
+    font-family: 'microsoft yahei';
+    font-size: 30rpx;
+    line-height: 95rpx;
+    height: 95rpx;
+    margin: 0 30rpx;
+    border-bottom: 1rpx solid #ccc;
+}

@@ -1,0 +1,44 @@
+<block wx:if="{{showLoand}}">  
+    <view class="page-loading">
+      <text class="weui-loading"/><text class="loading-text">玩命加载中</text>
+    </view>
+</block>
+
+<scroll-view bindscrolltolower="newScroll" scroll-y="true" lower-threshold="100" style="height: 100%;" bindscroll="sc" >
+    <block wx:for="{{move}}">
+    <view bindtap="newview" data-id="{{item.id}}" data-title="{{item.original_title}}">
+      <view class="move">
+      
+        <!--海报-->
+        <image class="move-img" src="{{item.images.large}}"></image>
+        <view class="flex-wrap flex-direction-col move-info flex-item">
+            <!--信息-->
+            <view class="flex-wrap flex-direction-row move-title">
+              <view class="move-name" >{{item.original_title}}</view>
+              <view class="move-year">{{item.year}}</view>
+            </view>
+
+            <!--评分-->
+            <view class="move-rating">
+                  <text>评分:</text>
+                  <text class="rating">{{item.rating.average}}</text>
+            </view>
+            <!--导演-->
+            <view class="directors flex-wrap flex-direction-row">
+               <text>导演:</text>
+               <block wx:for="{{item.directors}}">
+                <text>{{item.name}}</text>
+              </block>
+            </view>
+            <!--主演-->
+            <view class="casts flex-wrap flex-direction-row" >
+               <text>主演:</text>
+               <block wx:for="{{item.casts}}">
+                <text>{{item.name}}</text>
+              </block>
+            </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</scroll-view>

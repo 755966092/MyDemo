@@ -1,0 +1,32 @@
+.root {
+    width: 100%;
+}
+
+.list {
+    margin: 25rpx 30rpx;
+    padding-bottom: 25rpx;
+    border-bottom: 1px solid #ebebeb;
+}
+.list-image {
+    width: 300rpx;
+    height: 160rpx;
+    margin-right: 20rpx;
+}
+.list-info {
+    justify-content: space-between;
+    width: 80%;
+}
+.list-price {
+    justify-content: space-between;
+    align-items:flex-end
+}
+.price {
+    color: red;
+}
+.list-btn {
+    display:block;
+    line-height:2.3;
+    font-size:13px;
+    padding:0 1.34em;
+
+}
