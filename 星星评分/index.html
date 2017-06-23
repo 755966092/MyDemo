@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>星星评分</title>
+    <style>
+        .item {
+            display: inline-block;
+            width: 120px;
+            height: 114px;
+            background: url(./images/icon_xxx1.png)no-repeat;
+            margin: 0 10px;
+
+
+        }
+        .sel {
+            background: url(./images/icon_xxx2.png)no-repeat;
+        }
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <span onclick="selScore(this)" data-score='1' class="item sel"></span>
+        <span onclick="selScore(this)" data-score='2' class="item"></span>
+        <span onclick="selScore(this)" data-score='3' class="item"></span>
+        <span onclick="selScore(this)" data-score='4' class="item"></span>
+        <span onclick="selScore(this)" data-score='5' class="item"></span>
+    </p>
+</body>
+<script src='../js/jquery.min.js'></script>
+<script>
+    // 评分星星
+    function selScore(ele) {
+        var score = $(ele).attr('data-score');
+        if (score == 1 && $(ele).hasClass('sel') && $('.sel').length == 1) {
+            for (var i = 0; i < $('.item').length; i++) {
+                 $('.item').eq(i).removeClass('sel');
+            }    
+        } else {
+            for (var i = 0; i < $('.item').length; i++) {
+                $('.item').eq(i).removeClass('sel');
+            }
+            for (var i = 0; i < score; i++) {
+                $('.item').eq(i).addClass('sel');
+            }
+        }
+    }
+</script>
+</html>
